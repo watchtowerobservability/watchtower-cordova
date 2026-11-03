@@ -1,0 +1,6 @@
+// The native SDK (watchtower-android) as a local module until it is on a Maven registry:
+// add `include ':watchtower-android'` to platforms/android/settings.gradle (or via a cordova hook) with
+// projectDir at the downloaded sources.
+dependencies {
+    implementation project(':watchtower-android')
+}

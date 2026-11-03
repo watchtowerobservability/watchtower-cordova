@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Native bridge to the Watchtower iOS and Android SDKs (native crashes, ANR/hangs, screenshot replay).
+     The JavaScript side is the npm package, bundled with the app; it calls cordova.exec("Watchtower", ...). -->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="watchtower-cordova" version="0.1.0">
+  <name>Watchtower</name>
+  <license>Apache-2.0</license>
+  <engines>
+    <!-- Swift package plugins need cordova-ios 8 -->
+    <engine name="cordova-ios" version=">=8.0.0" />
+    <engine name="cordova-android" version=">=12.0.0" />
+  </engines>
+
+  <platform name="ios" package="swift">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Watchtower">
+        <param name="ios-package" value="WatchtowerCordova" />
+        <param name="onload" value="false" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/WatchtowerCordova.swift" />
+  </platform>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Watchtower">
+        <param name="android-package" value="dev.watchtower.cordova.WatchtowerCordova" />
+      </feature>
+    </config-file>
+    <source-file src="src/android/WatchtowerCordova.kt" target-dir="app/src/main/kotlin/dev/watchtower/cordova" />
+    <framework src="src/android/watchtower.gradle" custom="true" type="gradleReference" />
+  </platform>
+</plugin>
