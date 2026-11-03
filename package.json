@@ -24,6 +24,7 @@
     "@watchtowerobservability/browser": ">=0.1.0"
   },
   "scripts": {
+    "prebuild": "node scripts/browser-src.mjs",
     "build": "node esbuild.config.mjs && tsgo -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",
     "test": "vitest run"
