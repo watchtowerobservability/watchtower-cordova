@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Sync with the monorepo: Hermetica write-up follow-ups and standalone builds in the public mirror.
+
 ## 0.1.0
 
 - Cordova package in TypeScript: browser SDK in the webview, device attributes from cordova-plugin-device, flush on pause, view on resume.
