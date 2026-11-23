@@ -1,7 +1,10 @@
 {
   "name": "@watchtowerobservability/cordova",
-  "version": "0.1.1",
-  "repository": { "type": "git", "url": "git+https://github.com/watchtowerobservability/watchtower-cordova.git" },
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerobservability/watchtower-cordova.git"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -13,13 +16,34 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "files": ["dist", "plugin.xml", "Package.swift", "src/ios", "src/android"],
+  "files": [
+    "dist",
+    "plugin.xml",
+    "Package.swift",
+    "src/ios",
+    "src/android"
+  ],
   "license": "Apache-2.0",
-  "engines": { "node": ">=18" },
-  "cordova": { "id": "watchtower-cordova", "platforms": ["ios", "android"] },
-  "keywords": ["ecosystem:cordova", "cordova-ios", "cordova-android"],
+  "engines": {
+    "node": ">=18"
+  },
+  "cordova": {
+    "id": "watchtower-cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
   "peerDependencies": {
     "@watchtowerobservability/browser": ">=0.1.0"
   },

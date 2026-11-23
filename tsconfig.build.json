@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
+  "compilerOptions": { "module": "NodeNext", "moduleResolution": "NodeNext",
     "noEmit": false,
     "declaration": true,
     "emitDeclarationOnly": true,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { WatchtowerClient, WatchtowerConfig } from "@watchtowerobservability/browser";
-import { createWatchtower, deviceAttrs, type Device, type Exec, type InitOptions } from "./core";
+import { createWatchtower, deviceAttrs, type Device, type Exec, type InitOptions } from "./core.js";
 
 function fakes(device: Device | undefined, withNative = false) {
   const calls: unknown[][] = [];

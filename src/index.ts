@@ -1,7 +1,7 @@
 import * as browser from "@watchtowerobservability/browser";
-import { createWatchtower, type Device, type Exec } from "./core";
+import { createWatchtower, type Device, type Exec } from "./core.js";
 
-export type { InitOptions } from "./core";
+export type { InitOptions } from "./core.js";
 
 type CordovaGlobal = { exec(ok: () => void, fail: (e: unknown) => void, service: string, action: string, args: unknown[]): void };
 const g = globalThis as { cordova?: CordovaGlobal; device?: Device };
